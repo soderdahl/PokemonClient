@@ -22,15 +22,15 @@ public class PokéClient {
         addPokemon(getPokemonById(1));
     }
 
-    public static Pokemon1 getPokemonById(int id) {
+    public static Pokémon1 getPokemonById(int id) {
         WebTarget target = client.target("https://pokeapi.co/api/v2/pokemon/" + id);
-        Pokemon1 pokemon = target.request().get(Pokemon1.class);
+        Pokémon1 pokemon = target.request().get(Pokémon1.class);
         System.out.println(pokemon);
         return pokemon;
 
     }
     
-    public static void addPokemon(Pokemon1 pokemon){
+    public static void addPokemon(Pokémon1 pokemon){
         em.persist(pokemon);
     }
 

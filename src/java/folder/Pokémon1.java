@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Pokemon1.findByWeight", query = "SELECT p FROM Pokemon1 p WHERE p.weight = :weight")})
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Pokemon1 implements Serializable {
+public class Pokémon1 implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -49,19 +49,19 @@ public class Pokemon1 implements Serializable {
     @Column(name = "WEIGHT")
     private Integer weight;
 
-    public Pokemon1() {
+    public Pokémon1() {
     }
 
-    public Pokemon1(Integer id) {
+    public Pokémon1(Integer id) {
         this.id = id;
     }
 
-    public Pokemon1(Integer id, String name) {
+    public Pokémon1(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Pokemon1(Integer id, String name, Integer base_Experience, Integer height, Integer weight) {
+    public Pokémon1(Integer id, String name, Integer base_Experience, Integer height, Integer weight) {
         this.id = id;
         this.name = name;
         this.base_Experience = base_Experience;
@@ -121,10 +121,10 @@ public class Pokemon1 implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Pokemon1)) {
+        if (!(object instanceof Pokémon1)) {
             return false;
         }
-        Pokemon1 other = (Pokemon1) object;
+        Pokémon1 other = (Pokémon1) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
